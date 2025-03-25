@@ -1,20 +1,21 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {useNavigate} from 'react-router-dom';
 import './App.css'
-import Components from './Components'
+import Login from './loginForm'
 
-var count = 0;
 function App() {
-  const [count, updateCount] = useState(0)
+
+
+  const navigate = useNavigate();
 
   return (
     <>
-      <Components />
-      <p>count: {count}</p>
-      <button onClick={()=> updateCount(count + 1)} >Click Here </button>
-     
-    </>
+    <h1>Home Page</h1>
+
+    <button onClick={() => navigate('/login')}>Login</button> 
+
+
+     </> 
   )
 }
 
